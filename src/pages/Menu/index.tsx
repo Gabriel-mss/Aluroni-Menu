@@ -4,6 +4,7 @@ import styles from "./Menu.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
 import Filtros from "./Filtros";
 import Ordenador from "./Ordenador";
+import Itens from './Itens'
 
 export default function Menu() {
   const [busca, setBusca] = useState("");
@@ -24,6 +25,7 @@ export default function Menu() {
           <Filtros filtro={filtro} setFiltro={setFiltro}/>
           <Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
         </div>
+        <Itens busca={busca}filtro={filtro} ordenador={ordenador}/>
       </section>
     </main>
   );
